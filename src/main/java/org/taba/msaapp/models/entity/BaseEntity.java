@@ -10,15 +10,15 @@ import java.util.Date;
 @Setter
 public class BaseEntity {
 
-    @Column(value = "CREATEAT")
+    @Column(name = "CREATEAT")
     private Date createat;
 
-    @Column(value = "CREATEBY")
+    @Column(name = "CREATEBY")
     private Long createby;
 
-    @Column(value = "MODIFIEDAT")
+    @Column(name = "MODIFIEDAT")
     private Date modifiedat;
 
-    @Column(value = "MODIFIEDBY")
+    @Column(name = "MODIFIEDBY")
     private Long modifiedby;
 }

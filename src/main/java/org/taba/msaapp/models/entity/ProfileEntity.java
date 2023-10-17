@@ -1,6 +1,7 @@
 package org.taba.msaapp.models.entity;
 
 import jakarta.persistence.Column;
+import jakarta.persistence.Table;
 import lombok.*;
 import org.springframework.data.annotation.Id;
 
@@ -11,55 +12,55 @@ import java.util.Date;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-@Table(value = "PROFILE")
+@Table(name = "PROFILE")
 public class ProfileEntity extends BaseEntity {
     @Id
-    @Column(value = "ID")
+    @Column(name = "ID")
     private Long id;
 
-    @Column(value = "PERSON")
+    @Column(name = "PERSON")
     private Long person;
 
-    @Column(value = "APPLICATIONID")
+    @Column(name = "APPLICATIONID")
     private String applicationid;
 
-    @Column(value = "MOBILENUMBER")
+    @Column(name = "MOBILENUMBER")
     private String mobilenumber;
 
-    @Column(value = "FIRSTNAME")
+    @Column(name = "FIRSTNAME")
     private String firstname;
 
-    @Column(value = "LASTNAME")
+    @Column(name = "LASTNAME")
     private String lastname;
 
-    @Column(value = "NATIONALCODE")
+    @Column(name = "NATIONALCODE")
     private String nationalcode;
 
-    @Column(value = "BIRTHDATE")
+    @Column(name = "BIRTHDATE")
     private Date birthdate;
 
-    @Column(value = "LOCATION")
+    @Column(name = "LOCATION")
     private Long location;
 
-    @Column(value = "ADDRESS")
+    @Column(name = "ADDRESS")
     private String address;
 
-    @Column(value = "PHONENUMBER")
+    @Column(name = "PHONENUMBER")
     private String phonenumber;
 
-    @Column(value = "POSTALCODE")
+    @Column(name = "POSTALCODE")
     private String postalcode;
 
-    @Column(value = "EMAIL")
+    @Column(name = "EMAIL")
     private String email;
 
-    @Column(value = "GENDER")
+    @Column(name = "GENDER")
     private String gender;
 
-    @Column(value = "MOBILEOPERATOR")
+    @Column(name = "MOBILEOPERATOR")
     private String mobileoperator;
 
-    @Column(value = "AVATARPATH")
+    @Column(name = "AVATARPATH")
     private String avatarpath;
 
 
