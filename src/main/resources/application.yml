@@ -1,0 +1,38 @@
+server:
+  port: 8081
+spring:
+  r2dbc:
+    url: r2dbc:oracle://10.30.33.15:1521/dbdevnew
+    username: msa_app
+    password: msa_app
+  datasource:
+    driver-class-name: oracle.jdbc.OracleDriver
+  cache:
+    redis:
+      host: localhost
+      port: 6379
+      pool:
+        max-active: 300
+        max-wait: 60000
+        max-idle: 100
+        min-idle: 20
+      timeout: 30000
+      password:
+jwt:
+  secret: fara-moblie-app
+security:
+  ignored:
+    path:
+      - "/app/loginByOtp"
+      - "/app/getCaptcha"
+      - "/app/sendOtpForLogin"
+logging:
+  level:
+    root: debug
+    org:
+      springframework:
+        security: debug
+authServer:
+  api:
+    baseUrl: http://localhost:8085
+    authUrl: /authenticate
